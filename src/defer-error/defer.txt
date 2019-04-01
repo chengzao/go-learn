@@ -1,0 +1,1 @@
+当函数执行结束时，从 defer 栈中执行语句 - 后进先出，先 'writer.Flush()'，再 'file.Close()'
