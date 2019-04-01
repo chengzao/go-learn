@@ -1,5 +1,5 @@
 // 传指针
-package pointer
+package main
 
 import "fmt"
 

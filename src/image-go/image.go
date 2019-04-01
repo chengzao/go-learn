@@ -1,4 +1,4 @@
-package image_go
+package main
 
 import (
 	"fmt"

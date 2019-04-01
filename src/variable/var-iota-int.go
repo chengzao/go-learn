@@ -10,15 +10,6 @@ var str2 = "str2"
 //str3 := "str3"   //错误
 var str3 = "tstr3-1"
 
-func main() {
-	println("main")
-	// varF()
-	// test()
-	// utfF()
-	constF()
-	runeByteF()
-}
-
 func varF() {
 	//var str5 int //声明str5后需要使用,否侧报错
 	str4 := "str4" //声明str4赋值str4后需要使用,否侧报错
@@ -27,10 +18,10 @@ func varF() {
 }
 
 func test() {
-	// str3 := "str3"
+	str3 = "str3"
 	println(str1) // "str1"
 	println(str2) // "str2"
-	println(str3) // "tstr3-1"
+	println(str3) // "str3"
 }
 
 func utfF() {
@@ -72,4 +63,13 @@ func init() {
 		c
 	)
 	println("init a b c:", a, b, c)
+}
+
+func main() {
+	println("main")
+	varF()
+	test()
+	utfF()
+	constF()
+	runeByteF()
 }

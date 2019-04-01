@@ -1,5 +1,5 @@
 // 运算
-package operator
+package main
 
 import "fmt"
 

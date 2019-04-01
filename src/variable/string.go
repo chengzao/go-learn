@@ -47,8 +47,7 @@ func strConF() {
 
 //
 func main() {
-	// complexF()
-	// strSliceF()
+	//complexF()
+	//strSliceF()
 	strConF()
-	// errF()
 }

@@ -2,9 +2,6 @@ package main
 
 import "fmt"
 
-func main() {
-	normalF()
-}
 func normalF() {
 	var (
 		a1  int        //0
@@ -43,5 +40,8 @@ func init() {
 	m := v
 	fmt.Println("v default is ", v)
 	fmt.Println("m default is ", m)
+}
 
+func main() {
+	normalF()
 }
