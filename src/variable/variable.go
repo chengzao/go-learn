@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/cmplx"
 )
 
 // 定义包内变量
@@ -50,11 +51,61 @@ func triangle() {
 	fmt.Println(c)
 }
 
+func euler() {
+	fmt.Printf("%.3f\n",
+		cmplx.Exp(1i*math.Pi)+1)
+}
+
+func calcTriangle(a, b int) int {
+	var c int
+	c = int(math.Sqrt(float64(a*a + b*b)))
+	return c
+}
+
+func constsF() {
+	const (
+		filename = "abc.txt"
+		a, b     = 3, 4
+	)
+	var c int
+	c = int(math.Sqrt(a*a + b*b))
+	fmt.Println(filename, c)
+}
+
+func enumsF() {
+	const (
+		cpp = iota
+		_
+		python
+		golang
+		javascript
+	)
+
+	const (
+		b = 1 << (10 * iota)
+		kb
+		mb
+		gb
+		tb
+		pb
+	)
+
+	fmt.Println(cpp, javascript, python, golang)
+	fmt.Println(b, kb, mb, gb, tb, pb)
+}
+
 func main() {
 	variableZeroValue()
 	variableInitialValue()
 	variableTypeDeduction()
 	variableShorter()
 	triangle()
+
+	var a, b int = 3, 4
+	fmt.Println(calcTriangle(a, b))
 	fmt.Println(aa, bb)
+
+	enumsF()
+	constsF()
+	euler()
 }

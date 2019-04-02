@@ -1,9 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"bufio"
+	"fmt"
+	"io"
+	"os"
+	"strconv"
 )
 
 func sum() int {
@@ -16,29 +18,48 @@ func sum() int {
 
 // 等同于 while(true)
 func deadLoop() {
+	// 没有条件的死循环
 	for {
 		fmt.Println("this is a deadLoop")
 	}
 }
 
-// Go 没有while，循环全部用 for，for的三个组件都可以省略
+func convertToBin(n int) string {
+	result := ""
+	for ; n > 0; n /= 2 {
+		lsb := n % 2
+		result = strconv.Itoa(lsb) + result
+	}
+	return result
+}
+
 func printFile(filename string) {
-	// 打开文件
 	file, err := os.Open(filename)
-	// 如果出错，结束进程
 	if err != nil {
 		panic(err)
 	}
-	// 获取读取器
-	scanner := bufio.NewScanner(file)
-	// 读取：It returns false when the scan stops, either by reaching the end of the input or an error
+
+	printFileContents(file)
+}
+
+func printFileContents(reader io.Reader) {
+	scanner := bufio.NewScanner(reader)
+
 	for scanner.Scan() {
 		fmt.Println(scanner.Text())
 	}
 }
 
-func main(){
+// run:  go run loop.go
+func main() {
 	sum := sum()
 	fmt.Printf("%v \n", sum)
 	printFile("abc.txt")
+	fmt.Println("convertToBin results:")
+	fmt.Println(
+		convertToBin(5),  // 101
+		convertToBin(13), // 1101
+		convertToBin(72387885),
+		convertToBin(0),
+	)
 }

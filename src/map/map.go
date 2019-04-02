@@ -22,6 +22,7 @@ func createMap() {
 
 	// 5、获取值并判断是否存在
 	value, exist := map3["c"]
+	fmt.Printf("exist: %v \n", exist)
 	if exist {
 		fmt.Println(value)
 	} else {
@@ -53,6 +54,6 @@ func transferFunc() {
 }
 
 func main() {
-	//createMap()
+	createMap()
 	transferFunc()
 }
