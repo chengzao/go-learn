@@ -10,8 +10,11 @@ replace golang.org/x/text => github.com/golang/text v0.3.0
 
 replace golang.org/x/sys => github.com/golang/sys v0.0.0-20190402142545-baf5eb976a8c
 
+replace importMod/hello => ../exportMod
+
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/astaxie/beego v1.11.1
 	github.com/jinzhu/configor v1.0.0
+	importMod/hello v0.0.0-00010101000000-000000000000
 )

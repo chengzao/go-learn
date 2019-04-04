@@ -2,6 +2,7 @@ package utils
 
 import "fmt"
 
+// PrintText
 func PrintText(text string) {
 	fmt.Println(text)
 }

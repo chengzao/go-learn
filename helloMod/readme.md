@@ -19,7 +19,7 @@
 - `go mod verify` //校验依赖
 - `go mod why` //解释为什么需要依赖
 - `go list -m -json all` //依赖详情
-
+- `go help mod`
 
 ## 资源
 
