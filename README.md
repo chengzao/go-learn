@@ -1,6 +1,6 @@
 # Learn golang
 
-URL : https://golang.org
+URL : [https://golang.org](https://golang.org)
 
 ## Dev Version
 
@@ -171,9 +171,17 @@ bin 编译后生成的可执行文件 # 可以把此目录加入到 $PATH 变量
 
 ## godoc
 
-运行`godoc -http=:8080` 启动本地文档，浏览器中打开`127.0.0.1:8080`
+命令行运行`godoc -http=:8080` 启动本地文档，浏览器中打开[127.0.0.1:8080](http://127.0.0.1:8080)
+
+## gopm
+
+- [Github: @gpmgo/gopm](https://github.com/gpmgo/gopm)
+- 安装: `go get -v -u github.com/gpmgo/gopm`
+- 使用: `gopm get -u -v -g url` && `go install url`
 
 ## 资料
 
 - [Go 语言极速入门](https://www.cnblogs.com/java-zhao/p/9942311.html)
 - [build-web-application-with-golang](https://github.com/astaxie/build-web-application-with-golang)
+- [golang.google.cn](https://golang.google.cn/doc/)
+- [goproxy.io](https://goproxy.io)

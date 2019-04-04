@@ -1,3 +1,5 @@
+# 变量variable
+
 ## 变量定义
 
 - 完全体：`var name type`

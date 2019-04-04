@@ -1,6 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+func Transtpye() {
+	var i int16 = 2
+	f := float64(i + 1)
+	u := uint(f)
+	fmt.Printf("i type is : %T %v \n", i, i)
+	fmt.Printf("f type is : %T %v \n", f, f)
+	fmt.Printf("u type is : %T %v \n", u, u)
+}
 
 func main() {
 	var a int
@@ -15,13 +26,4 @@ func main() {
 	fmt.Printf("e tpye is : %T \n", e)
 	fmt.Printf("%+d \n", -255)
 	Transtpye()
-}
-
-func Transtpye() {
-	var i int16 = 2
-	f := float64(i + 1)
-	u := uint(f)
-	fmt.Printf("i type is : %T %v \n", i, i)
-	fmt.Printf("f type is : %T %v \n", f, f)
-	fmt.Printf("u type is : %T %v \n", u, u)
 }

@@ -1,4 +1,4 @@
-# Map 映射
+# 映射Map
 
 - Map 是一个存储键值对的无序集合，每次迭代映射的时候顺序也可能不一样
 - Slice、Map、function 以及包含切片的结构类型不能作为 Map 的 key
