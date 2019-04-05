@@ -181,6 +181,7 @@ bin 编译后生成的可执行文件 # 可以把此目录加入到 $PATH 变量
 
 ## 资料
 
+- [studygolang@pkgdoc中文](https://studygolang.com/pkgdoc)
 - [Go 语言极速入门](https://www.cnblogs.com/java-zhao/p/9942311.html)
 - [build-web-application-with-golang](https://github.com/astaxie/build-web-application-with-golang)
 - [golang.google.cn](https://golang.google.cn/doc/)
