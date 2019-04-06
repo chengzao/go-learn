@@ -58,40 +58,43 @@ func euler() {
 
 func calcTriangle(a, b int) int {
 	var c int
+	// 类型转换
 	c = int(math.Sqrt(float64(a*a + b*b)))
 	return c
 }
 
-func constsF() {
-	const (
-		filename = "abc.txt"
-		a, b     = 3, 4
-	)
-	var c int
-	c = int(math.Sqrt(a*a + b*b))
-	fmt.Println(filename, c)
+//声明未赋值
+var str0 string
+var str1 string = "str1"
+var str2 = "str2"
+
+//str3 := "str3"   //错误
+var str3 = "tstr3-1"
+
+func varF() {
+	//var str5 int //声明str5后需要使用,否侧报错
+	str4 := "str4" //声明str4赋值str4后需要使用,否侧报错
+	println(str0)  //
+	println(str4)  // "str4"
 }
 
-func enumsF() {
-	const (
-		cpp = iota
-		_
-		python
-		golang
-		javascript
-	)
+func test() {
+	str3 = "str3"
+	println(str1) // "str1"
+	println(str2) // "str2"
+	println(str3) // "str3"
+}
 
-	const (
-		b = 1 << (10 * iota)
-		kb
-		mb
-		gb
-		tb
-		pb
-	)
+func utfF() {
+	println('a') // 97
+	println("a") // "a"
+}
 
-	fmt.Println(cpp, javascript, python, golang)
-	fmt.Println(b, kb, mb, gb, tb, pb)
+func runeByteF() {
+	s := "Go编程"
+	println("'s' 的len ==>", len(s))                //8
+	println("'编'的len ==>", len(string(rune('编')))) //3
+	println("rune的len ==>", len([]rune(s)))        //4
 }
 
 func main() {
@@ -105,7 +108,5 @@ func main() {
 	fmt.Println(calcTriangle(a, b))
 	fmt.Println(aa, bb)
 
-	enumsF()
-	constsF()
 	euler()
 }
