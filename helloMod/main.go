@@ -9,6 +9,6 @@ import (
 
 func main() {
 	fmt.Printf("golang mod ! \n")
-	utils.PrintText("from hello mod utils \n")
+	utils.PrintText("I from helloMod/utils file tool.go \n")
 	beego.Run()
 }
