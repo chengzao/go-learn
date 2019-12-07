@@ -43,6 +43,41 @@ bin 编译后生成的可执行文件 # 可以把此目录加入到 $PATH 变量
 - `go list` 列出当前全部安装的package
 - `go run file.go` 编译并运行Go程序
 
+## 跨平台编译
+
+- 只需要指定目标操作系统的平台和处理器架构
+
+```bash
+SET CGO_ENABLED=0  // 禁用CGO
+SET GOOS=linux  // 目标平台是linux
+SET GOARCH=amd64  // 目标处理器架构是amd64
+```
+
+- Mac 下编译 Linux 和 Windows平台 64位 可执行程序
+
+```bash
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 # go build
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 # go build
+```
+
+- Linux 下编译 Mac 和 Windows 平台64位可执行程序
+
+```bash
+CGO_ENABLED=0 GOOS=darwin GOARCH=amd64  # go build
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 # go build
+```
+
+- Windows下编译Mac平台64位可执行程序
+
+```bash
+SET CGO_ENABLED=0
+SET GOOS=darwin
+SET GOARCH=amd64
+
+# run
+go build
+```
+
 ## 命令参数
 
 ### go build
