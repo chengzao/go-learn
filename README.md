@@ -8,6 +8,8 @@ go version: 1.12.1
 
 ## Config Path Env
 
+- [install_go_dev](https://www.liwenzhou.com/posts/Go/install_go_dev/)
+
 - mac env
 
 ```bash
@@ -25,8 +27,7 @@ export PATH=$PATH:$GOBIN:$GOPATH/bin
 # 环境变量配置:
 GOROOT : C:\Go
 GOPATH : E:\godev
-GOBIN : %GOPATH%\bin
-PATH : ;%GOROOT%\bin;%GOPATH%;%GOBIN%
+PATH : %GOROOT%\bin;%GOPATH%\bin
 ```
 
 - `$GOPATH` 目录约定有三个子目录

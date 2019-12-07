@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// Human desc
 type Human struct {
 	Name string
 }
