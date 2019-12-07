@@ -222,3 +222,4 @@ go build
 - [build-web-application-with-golang](https://github.com/astaxie/build-web-application-with-golang)
 - [golang.google.cn](https://golang.google.cn/doc/)
 - [goproxy.io](https://goproxy.io)
+- [Go语言学习之路](https://www.liwenzhou.com/posts/Go/go_menu/)
